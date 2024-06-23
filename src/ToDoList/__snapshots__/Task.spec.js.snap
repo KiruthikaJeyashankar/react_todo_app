@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Task Tests should render task list 1`] = `
+<DocumentFragment>
+  <li>
+    <span>
+      Test task
+    </span>
+  </li>
+</DocumentFragment>
+`;
