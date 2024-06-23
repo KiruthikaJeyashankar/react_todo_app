@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ToDoList Tests should render todo list 1`] = `
+exports[`ToDoList Tests should render todo list and button - empty list, remove completed 1`] = `
 <DocumentFragment>
   <div>
     <ul>
@@ -11,9 +11,7 @@ exports[`ToDoList Tests should render todo list 1`] = `
       </li>
       <li>
         <span>
-          <s>
-            Test task 2
-          </s>
+          Test task 2
         </span>
       </li>
     </ul>
@@ -21,70 +19,14 @@ exports[`ToDoList Tests should render todo list 1`] = `
      
     <br />
     <button
-      data-testid="empty-list-button"
       type="button"
     >
       Empty List
     </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`ToDoList Tests should render todo list and  1`] = `
-<DocumentFragment>
-  <div>
-    <ul>
-      <li>
-        <span>
-          Test task 1
-        </span>
-      </li>
-      <li>
-        <span>
-          <s>
-            Test task 2
-          </s>
-        </span>
-      </li>
-    </ul>
-    <br />
-     
-    <br />
     <button
-      data-testid="empty-list-button"
       type="button"
     >
-      Empty List
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`ToDoList Tests should render todo list and empty list button 1`] = `
-<DocumentFragment>
-  <div>
-    <ul>
-      <li>
-        <span>
-          Test task 1
-        </span>
-      </li>
-      <li>
-        <span>
-          <s>
-            Test task 2
-          </s>
-        </span>
-      </li>
-    </ul>
-    <br />
-     
-    <br />
-    <button
-      data-testid="empty-list-button"
-      type="button"
-    >
-      Empty List
+      Remove Completed
     </button>
   </div>
 </DocumentFragment>

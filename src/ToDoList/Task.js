@@ -4,6 +4,7 @@ export default function Task({ task, tellParent }) {
 
     const toggleTask = () => {
         const newTask = { ...task, completed: !task.completed }
+        console.log("newtask ",newTask)
         tellParent(newTask)
     }
 
