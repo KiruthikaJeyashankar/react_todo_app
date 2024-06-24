@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Task Tests renders TODOList correctly 1`] = `
+exports[`Task Tests renders Task correctly 1`] = `
 <li>
   <span
     onClick={[Function]}

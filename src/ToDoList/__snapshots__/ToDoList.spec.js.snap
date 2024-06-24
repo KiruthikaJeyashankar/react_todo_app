@@ -28,5 +28,10 @@ exports[`ToDoList Tests renders TODOList correctly 1`] = `
   >
     Empty List
   </button>
+  <button
+    onClick={[Function]}
+  >
+    Remove Completed
+  </button>
 </div>
 `;

@@ -13,9 +13,10 @@ describe('Task Tests', () => {
     };
 
     it('should render task list', () => {
-        const component = render(<Task task={task} tellParent={jest.fn()} />);
+        const {getByText} = render(<Task task={task} tellParent={jest.fn()} />);
+        const taskText = getByText(task.text);
 
-        expect(component.getByText(task.text)).toBeInTheDocument();
+        expect(taskText).toBeInTheDocument();
     });
 
     it('renders Task correctly', () => {
