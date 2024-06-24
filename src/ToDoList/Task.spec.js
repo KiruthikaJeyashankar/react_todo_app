@@ -3,6 +3,8 @@ import { render } from '@testing-library/react';
 import Task from './Task';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from "@testing-library/user-event";
+import renderer from "react-test-renderer";
+import ToDoList from "./ToDoList";
 
 describe('Task Tests', () => {
     const task = {
@@ -14,7 +16,13 @@ describe('Task Tests', () => {
         const component = render(<Task task={task} tellParent={jest.fn()} />);
 
         expect(component.getByText(task.text)).toBeInTheDocument();
-        expect(component.asFragment()).toMatchSnapshot();
+    });
+
+    it('renders Task correctly', () => {
+        const tree = renderer
+            .create(<Task task={task} tellParent={jest.fn()} />)
+            .toJSON();
+        expect(tree).toMatchSnapshot();
     });
 
     it('should call tell parent when a task is toggled as completed', () => {

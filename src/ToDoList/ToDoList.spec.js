@@ -3,6 +3,7 @@ import {render} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import ToDoList from './ToDoList';
 import userEvent from "@testing-library/user-event";
+import renderer from 'react-test-renderer';
 
 describe('ToDoList Tests', () => {
     const task1 = 'Test task 1';
@@ -18,7 +19,13 @@ describe('ToDoList Tests', () => {
         expect(component.getByRole('list')).toBeInTheDocument();
         expect(component.getByRole('list')).toHaveTextContent('Test task 1Test task 2');
         expect(component.getByTestId('empty-list-button')).toBeInTheDocument();
-        expect(component.asFragment()).toMatchSnapshot();
+    });
+
+    it('renders TODOList correctly', () => {
+        const tree = renderer
+            .create(<ToDoList listOfTasks={listOfTasks}/>)
+            .toJSON();
+        expect(tree).toMatchSnapshot();
     });
 
     it('should strike the task when clicked on the task', () => {

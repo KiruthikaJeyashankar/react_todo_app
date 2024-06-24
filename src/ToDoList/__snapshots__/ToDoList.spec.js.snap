@@ -1,29 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ToDoList Tests should render todo list and empty list button 1`] = `
-<DocumentFragment>
-  <div>
-    <ul>
-      <li>
-        <span>
-          Test task 1
-        </span>
-      </li>
-      <li>
-        <span>
-          Test task 2
-        </span>
-      </li>
-    </ul>
-    <br />
-     
-    <br />
-    <button
-      data-testid="empty-list-button"
-      type="button"
-    >
-      Empty List
-    </button>
-  </div>
-</DocumentFragment>
+exports[`ToDoList Tests renders TODOList correctly 1`] = `
+<div>
+  <ul>
+    <li>
+      <span
+        onClick={[Function]}
+      >
+        Test task 1
+      </span>
+    </li>
+    <li>
+      <span
+        onClick={[Function]}
+      >
+        Test task 2
+      </span>
+    </li>
+  </ul>
+  <br />
+   
+  <br />
+  <button
+    data-testid="empty-list-button"
+    onClick={[Function]}
+    type="button"
+  >
+    Empty List
+  </button>
+</div>
 `;
